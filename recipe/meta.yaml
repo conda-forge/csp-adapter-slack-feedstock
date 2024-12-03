@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/csp-adapter-slack/csp_adapter_slack-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/csp-adapter-slack/csp_adapter_slack-{{ version }}.tar.gz
   sha256: 7d86d685e92c338d2bda3fbc0f0635b224993d8f340d6705fa0f2e40b7371912
 
 build:
@@ -17,16 +17,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - csp
+    - pydantic
     - slack-sdk >=3
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
