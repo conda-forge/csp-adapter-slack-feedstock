@@ -1,5 +1,5 @@
 {% set name = "csp-adapter-slack" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/csp-adapter-slack/csp_adapter_slack-{{ version }}.tar.gz
-  sha256: 374761dc956b472d1744230f8669858642199decd968d4d7da912bcf1a24d423
+  sha256: 3301d204a0ecdb8a795851ddfeed012046602a0e2461bc79e21e7e3f0cdfdadb
 
 build:
   number: 0
